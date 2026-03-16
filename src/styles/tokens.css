@@ -1,5 +1,4 @@
-@layer base {
-  :root {
+:root {
     --color-bg:              #0f1117;
     --color-surface:         #1a1d27;
     --color-border:          #2a2d3a;
@@ -34,5 +33,4 @@
     --radius-md: 0.5rem;
     --radius-lg: 0.75rem;
     --radius-xl: 1rem;
-  }
 }

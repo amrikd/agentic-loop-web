@@ -1,13 +1,13 @@
-# Team Pulse — Web Starter
+# The Agentic Loop — Web Starter
 
-Anonymous mood & feedback tool built at **The Agentic Loop** (March 20).
+Anonymous mood & feedback tool built at **The Agentic Loop**.
 
 ---
 
 ## Setup
 
 ```bash
-git clone git@github.com:amrik/agentic-loop-web.git
+git clone git@github.com:amrikd/agentic-loop-web.git
 cd agentic-loop-web
 npm install
 cp .env.example .env.local
