@@ -1,9 +1,8 @@
 "use client";
 
 // Build your mood submission UI here.
-// Use submitMood() from @/lib/api
-//
 // What to build:
+//  - API client (fetch wrapper for the Pulse API)
 //  - Mood selector (5 buttons, 1=bad to 5=great)
 //  - Optional comment textarea (max 280 chars)
 //  - Submit button with loading state
@@ -24,7 +23,7 @@ export default function SubmitPage() {
       <p style={{ color: "var(--text-secondary)", textAlign: "center", maxWidth: "400px" }}>
         Build your mood submission UI here.
         <br />
-        Use <code>submitMood()</code> from <code>@/lib/api</code>
+        Build your API client and submit mood UI here.
       </p>
     </div>
   );

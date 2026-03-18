@@ -30,7 +30,6 @@ You CAN and SHOULD create `.md` files. You must NOT create `.ts/.tsx` source fil
 ## What's Already Built
 
 The repo already has these — do NOT redesign them:
-- `lib/api.ts` — Typed fetch client with all 5 endpoint functions
 - `lib/types.ts` — All TypeScript interfaces for request/response shapes
 - `lib/config.ts` — Base URL, team ID, mock toggle
 - `lib/mock-data.ts` — Static mock data for offline development
@@ -40,10 +39,11 @@ The repo already has these — do NOT redesign them:
 
 ## What Needs Architecture
 
-1. **SubmitPage** (`app/submit/page.tsx`) — mood selection state, comment input, submission lifecycle, success/error feedback
-2. **DashboardPage** (`app/dashboard/page.tsx`) — fetching results + history + comments, refresh mechanism, loading/empty states
-3. **Shared components** — mood button, comment card, distribution chart, loading skeleton
-4. **State management** — hooks for form state, data fetching, error handling
+1. **API client** (`lib/api.ts`) — Typed fetch wrapper for all 5 endpoints, error handling, request/response typing
+2. **SubmitPage** (`app/submit/page.tsx`) — mood selection state, comment input, submission lifecycle, success/error feedback
+3. **DashboardPage** (`app/dashboard/page.tsx`) — fetching results + history + comments, refresh mechanism, loading/empty states
+4. **Shared components** — mood button, comment card, distribution chart, loading skeleton
+5. **State management** — hooks for form state, data fetching, error handling
 
 ## API Contract
 

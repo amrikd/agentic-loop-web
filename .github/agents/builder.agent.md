@@ -31,26 +31,28 @@ When the user asks you to build something:
 ## Rules
 
 - Generate production-quality code. No placeholder TODOs — write real implementations.
-- Use the existing API client and types. Do NOT recreate them.
+- Use the existing types and config. Do NOT recreate them.
 - Follow the architecture from Phase 1 if the engineer has one (check for `ARCHITECTURE.md`).
 
 ## Existing Code — Do NOT Recreate
 
-- API client functions in `lib/api.ts`:
-  - `submitMood(mood: number, comment?: string): Promise<SubmitMoodResponse>`
-  - `getResults(): Promise<ResultsResponse>`
-  - `getHistory(limit?: number): Promise<HistoryResponse>`
-  - `getComments(limit?: number): Promise<CommentsResponse>`
-  - `healthCheck(): Promise<HealthResponse>`
 - All TypeScript interfaces in `lib/types.ts`
+- Config in `lib/config.ts` (base URL, team ID)
 - Design tokens in `lib/design-tokens.ts` and CSS variables in `app/globals.css`
+- Mock data in `lib/mock-data.ts`
 
 ## What to Build
+
+### API Client (`lib/api.ts`)
+- Typed fetch wrapper with functions for all 5 endpoints (see API Response Shapes below)
+- Use base URL and team ID from `lib/config.ts`
+- Error handling: catch network errors, parse `{ error: string }` responses
+- Return typed responses using interfaces from `lib/types.ts`
 
 ### Mood Submission Page (`app/submit/page.tsx`)
 - 5 mood buttons (1–5) with distinct mood colors
 - Optional comment textarea (max 280 chars, live character count)
-- Submit button → `submitMood()` from `lib/api.ts`
+- Submit button that calls your API client's submit function
 - Loading/disabled state during submission
 - Success/error feedback (toast, banner, or inline)
 

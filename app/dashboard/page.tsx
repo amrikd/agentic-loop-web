@@ -1,9 +1,8 @@
 "use client";
 
 // Build your dashboard UI here.
-// Use getResults(), getHistory(), getComments() from @/lib/api
-//
 // What to build:
+//  - API client (fetch wrapper for the Pulse API)
 //  - Average mood display
 //  - Distribution bar chart
 //  - Recent comments feed
@@ -25,8 +24,7 @@ export default function DashboardPage() {
       <p style={{ color: "var(--text-secondary)", textAlign: "center", maxWidth: "400px" }}>
         Build your dashboard UI here.
         <br />
-        Use <code>getResults()</code>, <code>getHistory()</code>,
-        <code>getComments()</code> from <code>@/lib/api</code>
+        Build your API client and dashboard UI here.
       </p>
     </div>
   );
