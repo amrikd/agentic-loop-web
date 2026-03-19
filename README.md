@@ -1,6 +1,6 @@
 # Team Pulse
 
-An anonymous team mood and feedback tool. Submit how you're feeling, see the team's pulse in real time.
+An anonymous team mood and feedback tool. Submit how you're feeling, see the team's pulse update live.
 
 ---
 
@@ -167,7 +167,7 @@ teamId: "dev-XX"  // ← Your assigned number
 ## Stretch Features
 
 Done early? Try these:
-- Real-time polling (auto-refresh dashboard every 30s)
+- Auto-refresh dashboard (poll every 30s)
 - Mood trend chart from history data
 - Time range filtering
 - Keyboard shortcuts (1–5 to select mood)
